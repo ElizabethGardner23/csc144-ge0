@@ -4,11 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * The class Means includes methods to generate and print list of random integers
+ * and find the arithmetic, geometric, and harmonic mean of the list.
+ * 
+ * @author Elizabeth Gardner
+ * @version 25 March 2020
+ */
 public class Means {
 
     private static final Random RNG = new Random();
     private static final int SIZE_THRESHOLD = 12;
 
+    /**
+     * The method makeRandomList produces a list of random integers.
+     * 
+     * @param size
+     * @return ArrayList
+     */
     public static List<Double> makeRandomList(int size) {
         List<Double> result = new ArrayList<>();
 
@@ -20,6 +33,11 @@ public class Means {
         return result;
     } // makeRandomList( int )
 
+    /**
+     * The method printList prints a list of random doubles.
+     * 
+     * @param data
+     */
     public static void printList(List<Double> data) {
         if (data.size() < SIZE_THRESHOLD) {
             for (double x : data) {
@@ -34,6 +52,13 @@ public class Means {
         } // else
     } // printList( List<Double> )
 
+    /**
+     * The method arithmeticMean calculates the arithmetic mean of
+     * a list of doubles.
+     * 
+     * @param data
+     * @return double
+     */
     public static double arithmeticMean(List<Double> data) {
         double result = 0.0;
 
@@ -49,6 +74,13 @@ public class Means {
         return result;
     } // arithmeticMean( List<Double> )
 
+    /**
+     * The method geometricMean calculates the geometric mean of
+     * a list of doubles.
+     * 
+     * @param data
+     * @return double
+     */
     public static double geometricMean(List<Double> data) {
         double result = 0.0;
 
@@ -63,6 +95,13 @@ public class Means {
         return result;
     } // geometricMean( List<Double> )
 
+    /**
+     * The method harmonicMean calculates the harmonic mean of
+     * a list of doubles.
+     * 
+     * @param data
+     * @return double
+     */
     public static double harmonicMean(List<Double> data) {
         double result = 0.0;
 
@@ -76,6 +115,13 @@ public class Means {
         return result;
     } // harmonicMean( List<Double> )
 
+    /**
+     * The main method prints the String "Hallo!," produces a new ArrayList
+     * of doubles, then prints the arithmetic, geometric, and harmonic means
+     * of the list.
+     * 
+     * @param args 
+     */
     public static void main(String[] args) {
         System.out.println("Hallo!");
         //List<Double> values = makeRandomList(20);
